@@ -14,7 +14,7 @@ docker build -t ums-nginx-rtmp .
 
 # Start the docker container 
 ```bash 
-docker run -d -p 1935:1935 --name ums-rtmp ums-nginx-rmtp
+docker run -d -p 1935:1935 --name ums-rtmp ums-nginx-rtmp
 ```
 
 # License
