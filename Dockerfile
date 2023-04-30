@@ -1,6 +1,12 @@
-FROM buildpack-deps:stretch
+FROM debian:buster
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget build-essential libpcre3 libpcre3-dev zlib1g-dev
 
-LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
+
+# Versions of Nginx and nginx-rtmp-module to use
+ENV NGINX_VERSION nginx-1.18.0
+ENV NGINX_RTMP_MODULE_VERSION 1.2.2
+
 
 # Versions of Nginx and nginx-rtmp-module to use
 ENV NGINX_VERSION nginx-1.18.0
